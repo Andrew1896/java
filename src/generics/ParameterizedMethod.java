@@ -15,14 +15,14 @@ public class ParameterizedMethod {
         al2.add("Salut");
         al2.add("Copii");
         al2.add("Suma");
-        String s = GenMethod.getSecondElement(al2);
-        System.out.println(s);
+//        String s = GenMethod.getSecondElement(al2);
+//        System.out.println(s);
 
     }
 }
 
 class GenMethod{
-    public  static <T> T getSecondElement(ArrayList<T> al){
+    public  static <T extends Number> T getSecondElement(ArrayList<T> al){
         return al.get(1);
     }
 }
