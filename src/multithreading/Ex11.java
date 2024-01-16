@@ -12,8 +12,8 @@ public class Ex11 {
         Thread thread2 = new Thread(new R());
         thread1.start();
         thread2.start();
-         thread1.join();
-         thread2.join();
+        thread1.join();
+        thread2.join();
         System.out.println(counter);
     }
 }

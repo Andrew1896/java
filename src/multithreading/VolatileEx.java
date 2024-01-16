@@ -1,7 +1,7 @@
 package multithreading;
 
 public class VolatileEx extends Thread {
-   volatile boolean b = true;
+    volatile boolean b = true;
 
     public void run() {
         long counter = 0;

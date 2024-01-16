@@ -11,6 +11,6 @@ public class Ex6 implements Runnable {
         Thread thread = new Thread(new Ex6());
         thread.start();
         System.out.println("Method main. Thread name = "
-        + Thread.currentThread().getName());
+                + Thread.currentThread().getName());
     }
 }

@@ -8,6 +8,7 @@ public class SynchronizedBlock2 {
             counter++;
         }
     }
+
     public static void main(String[] args) throws InterruptedException {
         Thread thread1 = new Thread(new R2());
         Thread thread2 = new Thread(new R2());

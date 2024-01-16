@@ -13,12 +13,13 @@ public class Ex9 {
 
     }
 }
-class Worker implements Runnable{
+
+class Worker implements Runnable {
 
     @Override
     public void run() {
         System.out.println("Work begins");
-        try{
+        try {
             Thread.sleep(2500);
         } catch (InterruptedException e) {
             e.printStackTrace();
