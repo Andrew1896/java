@@ -7,7 +7,7 @@ public class CallableFactorial {
 
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Factorial2 factorial2 = new Factorial2(5);
+        Factorial2 factorial2 = new Factorial2(6);
         Future<Integer> future = executorService.submit(factorial2);
         try {
             factorialResult = future.get();
@@ -34,13 +34,14 @@ class Factorial2 implements Callable<Integer> {
 
     @Override
     public Integer call() throws Exception {
-        if (f <= 0)
-            System.out.println("Ati introdus un numar gresit");
-        return;
-    }
+        if (f <= 0) {
+            throw new Exception("Ati introdus un numar gresit");
+        }
 
-    int result = 1;
-        for(int i = 1;i <=f;i++){
-        result *= i;
+        int result = 1;
+        for (int i = 1; i <= f; i++) {
+            result *= i;
+        }
+        return result;
     }
 }
