@@ -10,18 +10,20 @@ public class CallableFactorial {
         Factorial2 factorial2 = new Factorial2(6);
         Future<Integer> future = executorService.submit(factorial2);
         try {
+            System.out.println(future.isDone());
+            System.out.println("Dorim sa obtinem rezultatul");
             factorialResult = future.get();
+            System.out.println("Am obtinut rezultatul");
+            System.out.println(future.isDone());
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
-            e.printStackTrace();
             System.out.println(e.getCause());
         }
         finally {
             executorService.shutdown();
         }
         System.out.println(factorialResult);
-
     }
 }
 
@@ -41,6 +43,7 @@ class Factorial2 implements Callable<Integer> {
         int result = 1;
         for (int i = 1; i <= f; i++) {
             result *= i;
+            Thread.sleep(1000);
         }
         return result;
     }
