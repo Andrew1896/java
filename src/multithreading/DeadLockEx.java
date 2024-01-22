@@ -9,7 +9,6 @@ public class DeadLockEx {
         Thread20 thread20 = new Thread20();
         thread10.start();
         thread20.start();
-
     }
 }
 
@@ -35,7 +34,6 @@ class Thread20 extends Thread {
             System.out.println("Thread20: Incercarea de a acapara monitorul obiectului lock1");
             synchronized (DeadLockEx.lock2) {
                 System.out.println("Thread20: Monitorul obiectulelor lock1" + " si lock2 a fost acaparet");
-
             }
         }
     }
