@@ -7,7 +7,7 @@ public class FileWriterEx {
     public static void main(String[] args) throws IOException {
         String rubai = "Pentru ca raul sa triumfe este suficient ca oamenii buni sa nu faca nimic" +
                 " Edmund Burke";
-        String s = " Salut!\n";
+        String s = "Salut!\n";
 
         try (FileWriter writer = new FileWriter("test2.txt", true)) {
 //            writer = new FileWriter("C:\\Users\\ionla\\OneDrive\\Рабочий стол\\text1");
