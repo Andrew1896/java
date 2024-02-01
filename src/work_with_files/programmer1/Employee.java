@@ -9,15 +9,17 @@ package work_with_files.programmer1;
         String department;
         //    int age;
         transient double salary;
+        Car car;
 
         public Employee(String name, String surname, String department,
 //                    int age,
-                        double salary) {
+                        double salary, Car car) {
             this.name = name;
             this.surname = surname;
             this.department = department;
 //        this.age = age;
             this.salary = salary;
+            this.car = car;
         }
 
         @Override
@@ -28,6 +30,7 @@ package work_with_files.programmer1;
                     ", department='" + department + '\'' +
 //                ", age=" + age +
                     ", salary=" + salary +
+                    ", car=" + car +
                     '}';
         }
     }
