@@ -2,11 +2,10 @@ package work_with_files;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.RandomAccessFile;
 
-public class RandonAccessFile {
+public class RandomAccessFile {
     public static void main(String[] args) {
-        try (RandomAccessFile file = new RandomAccessFile("test10.txt", "rw")) {
+        try (java.io.RandomAccessFile file = new java.io.RandomAccessFile("test10.txt", "rw")) {
             int a = file.read();
             System.out.println((char) a);
 //            a = file.read();
@@ -14,7 +13,7 @@ public class RandonAccessFile {
             String s = file.readLine();
             System.out.println(s);
 
-            file.seek(101);
+            file.seek(200);
             String s1 = file.readLine();
             System.out.println(s1);
 
@@ -22,10 +21,10 @@ public class RandonAccessFile {
             System.out.println(position);
 
 //            file.seek(0);
-//            file.writeBytes("Privet");
+//            file.writeBytes("Salut");
 
             file.seek(file.length() - 1);
-            file.writeBytes("\n\t\t\t\t\t\t\tWilliam Butler Yeats");
+            file.writeBytes("\n\t\t\t\t\t\tWilliam Shakespeare");
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -34,4 +33,5 @@ public class RandonAccessFile {
         }
     }
 }
+
 
