@@ -25,6 +25,16 @@ public class ChannelBufferEx1 {
                 byteRead = channel.read(buffer);
             }
             System.out.println(poezie);
+            String text = "\nDacă vrei să duci o viața fericită, leag-o de un scop,"
+                    + " nu de oameni și lucruri. – Albert Einstein";
+            ByteBuffer buffer1 = ByteBuffer.wrap(text.getBytes());
+            channel.write(buffer1);
+
+//            ByteBuffer buffer1 = ByteBuffer.allocate(text.getBytes().length);
+//            buffer1.put(text.getBytes());
+//            buffer1.flip();
+//            channel.write(buffer1);
+
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
