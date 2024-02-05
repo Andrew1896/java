@@ -7,9 +7,9 @@ import java.util.Arrays;
 public class FileEx {
     public static void main(String[] args) throws IOException {
         File file = new File("test2.txt");
-        File folder = new File("C:\\Users\\potin\\OneDrive\\Desktop\\A");
-        File file1 = new File("C:\\Users\\potin\\OneDrive\\Desktop\\A\\test2.txt");
-        File folder1 = new File("C:\\Users\\potin\\OneDrive\\Desktop\\B");
+        File folder = new File("C:\\Users\\ionla\\OneDrive\\Рабочий стол\\A");
+        File file1 = new File("C:\\Users\\ionla\\OneDrive\\Рабочий стол\\A\\test2.txt");
+        File folder1 = new File("C:\\Users\\ionla\\OneDrive\\Рабочий стол\\B");
 
         System.out.println("file.getAbsoluteFile() = " + file.getAbsoluteFile());
         System.out.println("folder.getAbsoluteFile() = " + folder.getAbsoluteFile());
